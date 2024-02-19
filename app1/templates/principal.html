@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>{% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="../static/css/diseño.css">
+    <script src="https://kit.fontawesome.com/6a6cd02302.js" crossorigin="anonymous"></script>
+    <link type="text/Js" rel="stylesheet" href="../static/javascript/funciones.js">
+    <script src="../js/funciones.js"></script>
+    <title>cubePlaze</title>
+    <style>
+      body {
+          overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+      }
+
+      .container {
+          max-width: 1000px; /* Establece un ancho máximo para el contenido */
+          margin: 0 auto; /* Centra el contenedor horizontalmente */
+      }
+  </style>
+  </head>
+  <body class="container-fluid ">
+    
+    <script >function contacto(){
+
+      window.addEventListener('scroll',()=>{var scroll=
+          document.documentElement.scrollTop;
+      console.log(scroll);
+      var botonarriba= document.getElementById('contactanos');
+      if(scroll>940){
+        contactanos.style.right= 118+"px";
+            
+
+        
+      }
+      if(scroll<940){
+        contactanos.style.right= -550+"px";
+      }
+      })
+  }
+  contacto();</script>
+  <script>
+    document.getElementById("toastbtn").onclick = function() {
+      var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+      var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl)
+      })
+      toastList.forEach(toast => toast.show())
+    }
+    </script>
+
+    
+
+
+
+
+
+
+      <header >
+          <div class="foto_titulo">
+          <img src="{% static '../static/imagenes/plagio.png' %}" alt="encabezado" width="100%" height="200">
+          </div>
+        <br><br>
+      </header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../tutorial">Tutoriales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="../mas">Mas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../comunidad">Comunidad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br><br>
+    </nav>
+    
+
+    <section class="conteiner-fluid">
+
+      <div class="offcanvas offcanvas-start" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Contacto</h1>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form action="/action_page.php">
+            <div class="mb-3 mt-3">
+              <label for="email" class="form-label">Correo Electronico:</label>
+              <input type="email" class="form-control" id="email" placeholder="Coloque su correo Electronico" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="text" class="form-label">Numero telefonico:</label>
+                
+                <div class="input-group mb-3">
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                      +569
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">+58</a></li>
+                      <li><a class="dropdown-item" href="#">+55</a></li>
+                      <li><a class="dropdown-item" href="#">+54</a></li>
+                    </ul>
+                  
+                  </div>
+                  <input type="text" class="form-control" id="numero" placeholder="12345678">
+                </div>
+              
+                
+                            
+              </div>
+              <label for="comment">Mensaje:</label>
+          <textarea class="form-control" rows="5" id="comment" name="mensaje"></textarea>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember" title="Siempre mandarme informacion de actualizaciones"> Notificarme
+            </label>
+          </div><br><br>
+          <button class="btn btn-secondary" type="button" onclick="datos()">Enviar</button>
+            </form>
+            </div>
+            <a href="../login" class="btn btn-primary">iniciar Sesión</a><br><br><br>
+            </div>
+            
+          
+          
+        
+        </div>
+      
+      </div> 
+      <br><br><br><br>
+
+      <div class="row">
+        <div class="col-xl-1"></div>
+        <div class="col-xl-4">
+        
+          
+          <h1 id="titulo_1">
+            ¿Que es el cubo de Rubik?
+          </h1 >
+          <p> el nombre es: {{nombre}}</p>
+          
+          <p>
+            El cubo de rubik es un rompecabezas tridimensional creado por Ernő Rubik en el 1974,
+            Inicialmente comenzo con solo el <a href=" https://es.wikipedia.org/wiki/Cubo_de_Rubik#:~:text=Un%20cubo%20de%20Rubik%20cl%C3%A1sico,quedar%20en%20un%20solo%20color." > cubo de 3x3x3</a> , actualmente hay miles de variantes de
+            cubos muy entretenidas y divertidas.
+          </p> <br><br><br>
+          <h2>
+              Estos son algunos de los mas conocidos
+          </h2>
+          <!-- Carousel -->
+          <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static '../static/imagenes/3x3.jfif' %}" alt="3x3x3" class="d-block w-100" >
+                <div class="carousel-caption">
+                  <h3>3x3x3</h3>
+                  <p class="bg-light text-dark">Es el cubo mas famoso, siendo el jugete mas vendido de la historia, llegando a vender 
+                    mas de 400 millones de unidades
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static '../static/imagenes/piraminx.jfif' %}" alt="pyraminx" class="d-block w-100" >
+                <div class="carousel-caption">
+                  <h3> Pyraminx</h3>
+                  <p class="bg-light text-dark">este es la modificacion de 3x3 mas famosa</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static '../static/imagenes/mirrow.jfif' %}" alt="Mirrow" class="d-block w-100">
+                <div class="carousel-caption">
+                  <h3>Mirrow</h3>
+                  <p class="bg-light text-dark">esta es una modificacion del 3x3 muy divertida</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static '../static/imagenes/2x2.jfif' %}" alt="2x2x2" class="d-block w-100" >
+                <div class="carousel-caption">
+                  <h3 class="bg-light text-dark">2x2</h3>
+                  <p class="bg-light text-dark">El hermano menor del 3x3</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static '../static/imagenes/megaminx.jfif' %}" alt="megaminx" class="d-block w-100" >
+                <div class="carousel-caption">
+                  <h3 class="bg-light text-dark">Megaminx</h3>
+                  <p class="bg-light text-dark">Que no te asuste su tamaño, no es tan dificil de armar</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+            <br><br><br>
+          </div>
+            <h2>¿SpeedCube?</h2>
+            <p>
+              Como lo dice su nombre, el speedCube es tratar de armar el cubo en el menor tiempo posible de tiempo, y en el speedCube
+              tenemos grandes records y te contare algunos de ellos.
+            </p>
+
+
+        </div>
+        
+        <div class="col-xl-3"></div>
+      <div class="col-xl-3">
+        
+        <div class="videos">
+        <video width="500"  autoplay muted replay >
+          <source src="{% static '../static/videos/vcubo_1.mp4' %}" type="video/mp4">
+
+        </video><br><br><br><br><br>
+        </div>
+        <div class="anuncios">
+          
+              <img src="{% static '../static/imagenes/publicidad_1.jpg' %}" alt="anuncio">    
+           
+      </div>
+      </div>
+      <div class="col-xl-1"></div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-xl-1"></div>
+        <div id="record_1" class="col-xl-3">
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="{% static '../static/imagenes/record_3x3.jpg' %}" alt="yusheng du" height="350">
+        <div class="card-body">
+          <h4 class="card-title">Yusheng Du</h4>
+          <p class="card-text">Proveniente de china, es el actual record de cubo 3x3 con un tiempo de 3.47 segundos superando el record de Max Park siendo de 4,33 segundos</p><br>
+        </div> 
+      </div>
+      <br><br><br>
+        <div id="record_3" class="col-xl-3">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="{% static '../static/imagenes/record_3.jpg' %}" alt="Dominik Górny" height="350">
+            <div class="card-body">
+              <h4 class="card-title">Dominik Górny</h4>
+              <p class="card-text">Con un record de 0.91 segundos, este joven se posiciono como el numero 1 en speedCube con pyraminx</p>
+            </div>
+          </div>
+        </div>
+     
+    </div>
+    <div id="record_2" class="col-xl-3">
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="{% static '../static/imagenes/Maciej Czapiewski.jpg' %}" alt="Maciej Czapiewski" height="350">
+        <div class="card-body">
+          <h4 class="card-title">Maciej Czapiewski</h4>
+          <p class="card-text">El fue el que hizo el sorprendente record de 0.49 segundos en un cubo de 2x2</p><br><br>
+        </div>
+      </div><br><br><br>
+
+      <div id="record_4" class="col-xl-3">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="{% static '../static/imagenes/record_4.png' %}" alt="Juan Pablo Huaqui" height="350">
+          <div class="card-body">
+            <h4 class="card-title">Juan Pablo Huaqui</h4>
+            <p class="card-text"> Juan Pablo superando su anterior record de 27.81 segundos en megaminx, siendo su tercera vez que supera su record</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-1" ></div>
+    <div class="col-xl-3">
+      <div class="videos">
+        
+      <video width="400"  autoplay muted replay >
+        
+        <source src="{% static '../static/videos/Mi video.mp4' %}" type="video/mp4">
+
+      </video>
+    </div>
+      <h4>¡Junto con los cubos vienen nuevas tecnologias geniales!</h4><br><br><br><br><br><br><br><br>
+      <div class="anuncios">
+        <div class="toast show">
+        <div class="toast-body">
+          <button type="button" class="btn-close" data-bs-dismiss="toast" id="x" ></button><br><br>
+          <img src="{% static '../static/imagenes/publicidad_2.jpg' %}" alt="anuncio_2" width="300" height="250">
+        </div>
+      </div>
+      
+    </div>
+    <div id="contactanos">
+      <div class="toast show">
+        
+          
+          <button type="button" class="btn-close" data-bs-dismiss="toast" id="x" ></button>
+          
+      
+        <div class="toast-body">
+          <button type="button" class="btn btn-primary btn-lg" id="boton_contacto" data-bs-toggle="offcanvas" data-bs-target="#demo" >contactanos</button>
+           
+        </div>
+      </div>
+      
+      
+    </div>
+    <!-- Offcanvas Sidebar -->
+
+    </div>
+   
+    </section>
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <h2>SIGUENOS</h2>
+          <div class="red-social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+  </body>
+</html>

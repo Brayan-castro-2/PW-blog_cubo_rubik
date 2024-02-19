@@ -1,0 +1,119 @@
+
+.foto_titulo{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+#Titulo_1{
+    
+    color: rgb(0, 0, 0);
+    text-align:center;
+    
+}
+.anuncios{
+
+    text-align: center;
+}
+.videos{
+
+    float: right;
+}
+h3{
+    color: black;
+}
+p{
+    
+    color: black;
+}
+#record_1{
+
+    float: left;
+}
+#record_2{
+    float: right;
+}
+
+.carousel-control-prev-icon{
+    
+    background-color: black;
+}
+.carousel-control-next-icon{
+
+    background-color: black
+    
+}
+.carousel-item{
+    width: 500;
+    height: 500;
+}
+h4{
+    text-align: center;
+}
+.Paana{
+    text-decoration: double;
+    color: blueviolet;
+
+}
+
+.tamaño_img{
+    height: 100;
+}
+
+.pie-pagina{
+    background-color: black;
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    color: white;
+    margin-top: 100;
+    margin-bottom: 25px ;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: black;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: rgb(152, 216, 42);
+}
+
+#contactanos {
+    
+    position: fixed;
+    bottom: 153px;
+    right: -500px;
+    width: 500px;
+    height: 80px; 
+}
+#whasap{
+color: white
+
+}
+#x{
+ float:right ;
+}
+#boton_contacto{
+    height: 55px; 
+    width: 320px;
+
+}
+body {
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+.container {
+    max-width: 1000px; /* Establece un ancho máximo para el contenido */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
